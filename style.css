@@ -1,0 +1,267 @@
+html {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(8, 8, 10);
+}
+
+.cme {
+    border-bottom: 2px solid turquoise;
+    padding-bottom: 10px;
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+span {
+    border-bottom: 2px solid turquoise;
+}
+
+body {
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-family: sans-serif;
+    color: white;
+    gap: 50px;
+    padding-bottom: 80px;
+}
+
+nav, footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav div, footer div {
+    flex: 1;
+}
+hr {
+    width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.links {
+    height: 3rem;
+    width: auto;
+}
+
+.l {
+    height: 2.4rem;
+    border-radius: 8px;
+}
+
+.pic {
+    height: 480px;
+    width: auto;
+    position: absolute;
+    left: 85%;
+    top: 0%;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+
+
+.skills {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.skills h2 {
+    font-size: 2rem;
+}
+
+.projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.int-proj {
+    display: flex;
+    align-items: center;
+}
+
+.int-proj div {
+    flex: 1;
+}
+
+.contact {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: fit-content fit-content;
+}
+
+.contact h1 {
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.contact form {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contact form input:focus, .contact form textarea:focus {
+    outline: none;
+}
+
+.contact form  * {
+    border: none;
+    background-color: transparent;
+    padding: 15px;
+    font-family: inherit;
+    color: inherit;
+}
+
+.contact textarea {
+    resize: none;
+}
+
+.contact form button {
+    padding: 0;
+    padding-bottom: 10px;
+    width: fit-content;
+    align-self: flex-end;
+    border-bottom: 2px solid turquoise;
+}
+
+
+
+
+.proj-cont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 15px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.project * {margin: 0; padding: 0;}
+.proj-cont a {
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid turquoise;
+}
+
+.project div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+
+}
+
+@media (width <= 1200px) {
+    body {
+        width: 80%;
+    }
+
+    .pic {
+        left: 90%;
+    }
+}
+
+@media (width <= 1000px) {
+    body {
+        width: 90%;
+    }
+    .pic {
+        left: 100%;
+    }
+}
+
+@media (width <= 860px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .intro h1 {
+        max-width: 480px !important;
+    }
+
+    .pic {
+        height: 420px;
+    }
+}
+
+
+@media (width <= 680px) {
+    .intro h1 {
+        width: 400px;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact form {
+        width: 80%;
+    }
+}
+
+@media (width <= 550px) {
+    .intro h1 {
+        font-size: 2.5rem;
+        width: 200px;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .proj-cont {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (width <= 450px) {
+    .skills {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    nav, footer {
+        flex-direction: column;
+    }
+    .gap {display: none;}
+
+    .pic {
+        position: initial;
+        transform: initial;
+    }
+
+    .intro h1 {
+        width: 100%;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+}
